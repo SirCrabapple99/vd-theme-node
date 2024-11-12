@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Canvas Page</title><style>body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }</style><script>window._onLoadCallbacks = [];
+        window._isCanvasLoaded = false;
+        window.canvasOnLoad = cb => {
+            if (window._isCanvasLoaded) cb();
+            window._onLoadCallbacks.push(cb); 
+            return () => window._onLoadCallbacks = window._onLoadCallbacks.filter(e=> e !== cb)
+        };</script><script defer="defer" src="js/runtime.bundle.js"></script><script defer="defer" src="js/canvas.bundle.js"></script></head><body></body></html>

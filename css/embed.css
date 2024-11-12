@@ -1,0 +1,15 @@
+/* CSS here is injected into the iframe window */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+    overflow:hidden;
+}
+
+canvas {
+    width: -moz-available;
+    width: -webkit-fill-available;
+    height: -moz-available;
+    height: -webkit-fill-available;
+}
