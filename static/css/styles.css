@@ -1,6 +1,10 @@
+@font-face {
+    font-family: 'ggsans';
+    src: url('/assets/fonts/ggsans-Bold.ttf') format('truetype');
+}
 body {
     margin: 0;
-    font-family: 'Franklin Gothic Normal', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'ggsans', sans-serif;
 }
 
 .smol {
@@ -41,47 +45,54 @@ main {
 }
 
 #nav {
+    font-family: 'ggsans', 'sans-serif';
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #80808022;
+    background-color: white,transparent;
     width: 100px;
     margin-right: 50px;
-    border-radius: 0px 50px 50px 0px;
-}
-
-#nav_top :first-child {
-    border-radius: 0px 50px 0px 0px;
-}
-
-#nav_bottom :last-child {
-    border-radius: 0px 0px 50px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 .tab_content {
     margin-top: 5vh;
     display: none;
+    transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
 }
 
 .tab_content.selected {
     display: block;
 }
 
+.tab_content #popup {
+    display: none;
+  }
+  
+  .tab_content:hover #popup {
+    position: absolute;
+    display: block;
+    background-color: #000066;
+  }
+
 .tab {
+    
+    font-family: 'ggsans', 'sans-serif';
+    font-size: 15px;
     background-color: #80808022;
     transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
     height: 100px;
     width: 100px;
     border: none;
     border-right: 0px solid transparent;
-    color: #bebd78;
-    transition: background-color 500ms, border-right 500ms, color 500ms;
+    color: #ffffff;
+    transition: background-color 500ms, border-left 500ms, color 500ms, font-size 500ms;
 }
 
 .tab.selected {
-    background-color: #86933edd;
-    border-right: 10px solid #b1b15299;
-    color: #ffffff;
+    background-color: #ffffff;
+    font-size: 18px;
+    color: #000000;
 }
 
 #editor_container {
@@ -129,7 +140,8 @@ input[type=color] {
   display: flex;
   align-items: center;
   justify-content: right;
-  align-self: center
+  align-self: center;
+  margin-right: 150px;
 }
 
 @media (prefers-color-scheme: light) {
